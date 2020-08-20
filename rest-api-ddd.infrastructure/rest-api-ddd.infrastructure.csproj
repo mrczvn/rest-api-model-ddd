@@ -5,4 +5,16 @@
     <RootNamespace>rest_api_ddd.infrastructure</RootNamespace>
   </PropertyGroup>
 
+  <ItemGroup>
+    <Folder Include="cross-cutting\" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Microsoft.EntityFrameworkCore" Version="3.1.7" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\rest-api-ddd.domain\rest-api-ddd.domain.csproj" />
+  </ItemGroup>
+
 </Project>

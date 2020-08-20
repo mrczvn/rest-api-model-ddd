@@ -5,4 +5,9 @@
     <RootNamespace>rest_api_ddd.domain.core</RootNamespace>
   </PropertyGroup>
 
+  <ItemGroup>
+    <Folder Include="interfaces\services\" />
+    <Folder Include="interfaces\repositories\" />
+  </ItemGroup>
+
 </Project>

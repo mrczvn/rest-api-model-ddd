@@ -1,0 +1,5 @@
+C:\Users\marvn\projects\c#\rest-api-ddd\rest-api-ddd.infrastructure\bin\Debug\netcoreapp3.1\rest-api-ddd.infrastructure.deps.json
+C:\Users\marvn\projects\c#\rest-api-ddd\rest-api-ddd.infrastructure\bin\Debug\netcoreapp3.1\rest-api-ddd.infrastructure.dll
+C:\Users\marvn\projects\c#\rest-api-ddd\rest-api-ddd.infrastructure\obj\Debug\netcoreapp3.1\rest-api-ddd.infrastructure.csprojAssemblyReference.cache
+C:\Users\marvn\projects\c#\rest-api-ddd\rest-api-ddd.infrastructure\obj\Debug\netcoreapp3.1\rest-api-ddd.infrastructure.AssemblyInfoInputs.cache
+C:\Users\marvn\projects\c#\rest-api-ddd\rest-api-ddd.infrastructure\obj\Debug\netcoreapp3.1\rest-api-ddd.infrastructure.AssemblyInfo.cs

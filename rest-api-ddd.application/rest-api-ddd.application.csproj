@@ -5,4 +5,9 @@
     <RootNamespace>rest_api_ddd.application</RootNamespace>
   </PropertyGroup>
 
+  <ItemGroup>
+    <Folder Include="dtos\" />
+    <Folder Include="interfaces\" />
+  </ItemGroup>
+
 </Project>
