@@ -1,5 +1,5 @@
-﻿using rest_api_ddd.domain.entitys;
-using rest_api_ddd.domain.services;
+﻿using rest_api_ddd.application.dtos;
+using rest_api_ddd.domain.entitys;
 using System.Collections.Generic;
 
 namespace rest_api_ddd.infrastructure.cross_cutting.interfaces
@@ -11,7 +11,7 @@ namespace rest_api_ddd.infrastructure.cross_cutting.interfaces
         /// </summary>
         /// <param name="clientDto"></param>
         /// <returns></returns>
-        Client MapperDtoEntity(ClientDto clientDto);
+        Client MapperDtoToEntity(ClientDto clientDto);
 
         /// <summary>
         ///
