@@ -57,7 +57,7 @@ namespace rest_api_ddd.domain.services
 
         public void Update(TEntity obj)
         {
-            throw new NotImplementedException();
+            repository.Update(obj);
         }
     }
 }
