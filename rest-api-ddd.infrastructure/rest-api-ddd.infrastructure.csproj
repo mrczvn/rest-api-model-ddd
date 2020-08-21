@@ -6,7 +6,7 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <Folder Include="cross-cutting\" />
+    <Folder Include="cross-cutting\ioc\" />
   </ItemGroup>
 
   <ItemGroup>
@@ -14,6 +14,7 @@
   </ItemGroup>
 
   <ItemGroup>
+    <ProjectReference Include="..\rest-api-ddd.application\rest-api-ddd.application.csproj" />
     <ProjectReference Include="..\rest-api-ddd.domain.core\rest-api-ddd.domain.core.csproj" />
     <ProjectReference Include="..\rest-api-ddd.domain\rest-api-ddd.domain.csproj" />
   </ItemGroup>

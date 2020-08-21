@@ -1,8 +1,8 @@
 ﻿using rest_api_ddd.application.dtos;
 using rest_api_ddd.domain.entitys;
 using rest_api_ddd.infrastructure.cross_cutting.interfaces;
-using System;
 using System.Collections.Generic;
+using System.Linq;
 
 namespace rest_api_ddd.infrastructure.cross_cutting.mapper
 {
@@ -15,7 +15,7 @@ namespace rest_api_ddd.infrastructure.cross_cutting.mapper
         /// </summary>
         /// <param name="productDto"></param>
         /// <returns></returns>
-        public Product MapperDtoEntity(ProductDto productDto)
+        public Product MapperDtoToEntity(ProductDto productDto)
         {
             var product = new Product()
             {
@@ -46,7 +46,9 @@ namespace rest_api_ddd.infrastructure.cross_cutting.mapper
 
         public IEnumerable<ProductDto> MapperListProductsDto(IEnumerable<Product> products)
         {
-            throw new NotImplementedException();
+            var dto = products.Select(p => new ProductDto { Id = p.Id, Name = p.Name, Value = p.Value });
+
+            return dto;
         }
     }
 }
