@@ -27,9 +27,13 @@ namespace rest_api_ddd.domain.services
             repository.Add(obj);
         }
 
+        /// <summary>
+        ///
+        /// </summary>
+        /// <returns></returns>
         public IEnumerable<TEntity> GetAll()
         {
-            throw new NotImplementedException();
+            return repository.GetAll();
         }
 
         public TEntity GetById(int id)
