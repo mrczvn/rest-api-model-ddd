@@ -1,0 +1,14 @@
+C:\Users\marvn\projects\c#\rest-api-ddd\rest-api-ddd.domain.services\bin\Debug\netcoreapp3.1\rest-api-ddd.domain.services.deps.json
+C:\Users\marvn\projects\c#\rest-api-ddd\rest-api-ddd.domain.services\bin\Debug\netcoreapp3.1\rest-api-ddd.domain.services.dll
+C:\Users\marvn\projects\c#\rest-api-ddd\rest-api-ddd.domain.services\bin\Debug\netcoreapp3.1\rest-api-ddd.domain.services.pdb
+C:\Users\marvn\projects\c#\rest-api-ddd\rest-api-ddd.domain.services\bin\Debug\netcoreapp3.1\rest-api-ddd.domain.core.dll
+C:\Users\marvn\projects\c#\rest-api-ddd\rest-api-ddd.domain.services\bin\Debug\netcoreapp3.1\rest-api-ddd.domain.dll
+C:\Users\marvn\projects\c#\rest-api-ddd\rest-api-ddd.domain.services\bin\Debug\netcoreapp3.1\rest-api-ddd.domain.core.pdb
+C:\Users\marvn\projects\c#\rest-api-ddd\rest-api-ddd.domain.services\bin\Debug\netcoreapp3.1\rest-api-ddd.domain.pdb
+C:\Users\marvn\projects\c#\rest-api-ddd\rest-api-ddd.domain.services\obj\Debug\netcoreapp3.1\rest-api-ddd.domain.services.csprojAssemblyReference.cache
+C:\Users\marvn\projects\c#\rest-api-ddd\rest-api-ddd.domain.services\obj\Debug\netcoreapp3.1\rest-api-ddd.domain.services.AssemblyInfoInputs.cache
+C:\Users\marvn\projects\c#\rest-api-ddd\rest-api-ddd.domain.services\obj\Debug\netcoreapp3.1\rest-api-ddd.domain.services.AssemblyInfo.cs
+C:\Users\marvn\projects\c#\rest-api-ddd\rest-api-ddd.domain.services\obj\Debug\netcoreapp3.1\rest-api-ddd.domain.services.csproj.CoreCompileInputs.cache
+C:\Users\marvn\projects\c#\rest-api-ddd\rest-api-ddd.domain.services\obj\Debug\netcoreapp3.1\rest-api-ddd.domain.services.csproj.CopyComplete
+C:\Users\marvn\projects\c#\rest-api-ddd\rest-api-ddd.domain.services\obj\Debug\netcoreapp3.1\rest-api-ddd.domain.services.dll
+C:\Users\marvn\projects\c#\rest-api-ddd\rest-api-ddd.domain.services\obj\Debug\netcoreapp3.1\rest-api-ddd.domain.services.pdb

@@ -26,7 +26,11 @@
         },
         "frameworks": {
           "netcoreapp3.1": {
-            "projectReferences": {}
+            "projectReferences": {
+              "C:\\Users\\marvn\\projects\\c#\\rest-api-ddd\\rest-api-ddd.domain.core\\rest-api-ddd.domain.core.csproj": {
+                "projectPath": "C:\\Users\\marvn\\projects\\c#\\rest-api-ddd\\rest-api-ddd.domain.core\\rest-api-ddd.domain.core.csproj"
+              }
+            }
           }
         },
         "warningProperties": {

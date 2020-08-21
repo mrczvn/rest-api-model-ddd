@@ -2,7 +2,7 @@
 using rest_api_ddd.domain.entitys;
 using System.Collections.Generic;
 
-namespace rest_api_ddd.infrastructure.cross_cutting.interfaces
+namespace rest_api_ddd.application.interfaces.mappers
 {
     public interface IMapperClient
     {

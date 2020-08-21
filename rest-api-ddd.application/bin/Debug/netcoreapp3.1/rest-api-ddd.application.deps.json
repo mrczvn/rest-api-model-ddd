@@ -1,0 +1,49 @@
+{
+  "runtimeTarget": {
+    "name": ".NETCoreApp,Version=v3.1",
+    "signature": ""
+  },
+  "compilationOptions": {},
+  "targets": {
+    ".NETCoreApp,Version=v3.1": {
+      "rest-api-ddd.application/1.0.0": {
+        "dependencies": {
+          "rest-api-ddd.domain.core": "1.0.0"
+        },
+        "runtime": {
+          "rest-api-ddd.application.dll": {}
+        }
+      },
+      "rest-api-ddd.domain/1.0.0": {
+        "runtime": {
+          "rest-api-ddd.domain.dll": {}
+        }
+      },
+      "rest-api-ddd.domain.core/1.0.0": {
+        "dependencies": {
+          "rest-api-ddd.domain": "1.0.0"
+        },
+        "runtime": {
+          "rest-api-ddd.domain.core.dll": {}
+        }
+      }
+    }
+  },
+  "libraries": {
+    "rest-api-ddd.application/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "rest-api-ddd.domain/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "rest-api-ddd.domain.core/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    }
+  }
+}

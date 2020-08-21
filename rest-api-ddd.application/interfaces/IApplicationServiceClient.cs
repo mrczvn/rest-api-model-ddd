@@ -1,4 +1,4 @@
-﻿using rest_api_ddd.domain.services;
+﻿using rest_api_ddd.application.dtos;
 using System.Collections.Generic;
 
 namespace rest_api_ddd.application.interfaces

@@ -1,10 +1,10 @@
 ﻿using rest_api_ddd.application.dtos;
+using rest_api_ddd.application.interfaces.mappers;
 using rest_api_ddd.domain.entitys;
-using rest_api_ddd.infrastructure.cross_cutting.interfaces;
 using System.Collections.Generic;
 using System.Linq;
 
-namespace rest_api_ddd.infrastructure.cross_cutting.mapper
+namespace rest_api_ddd.application.mappers
 {
     public class MapperProduct : IMapperProduct
     {
