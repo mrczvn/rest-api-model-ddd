@@ -1,4 +1,4 @@
-﻿namespace rest_api_ddd.domain.services
+﻿namespace rest_api_ddd.application.dtos
 {
     public class ClientDto
     {
