@@ -27,9 +27,21 @@ namespace rest_api_ddd.infrastructure.cross_cutting.mapper
             return client;
         }
 
+        /// <summary>
+        ///
+        /// </summary>
+        /// <param name="client"></param>
+        /// <returns></returns>
         public ClientDto MapperEntityToDto(Client client)
         {
-            throw new NotImplementedException();
+            var clientDto = new ClientDto()
+            {
+                Id = client.Id,
+                Name = client.Name,
+                Surname = client.Surname,
+                Email = client.Email
+            };
+            return clientDto;
         }
 
         public IEnumerable<ClientDto> MapperListClientsDto(IEnumerable<Client> clients)
