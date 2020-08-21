@@ -27,9 +27,21 @@ namespace rest_api_ddd.infrastructure.cross_cutting.mapper
             return product;
         }
 
-        public Product MapperEntityToDto(Product product)
+        /// <summary>
+        ///
+        /// </summary>
+        /// <param name="product"></param>
+        /// <returns></returns>
+        public ProductDto MapperEntityToDto(Product product)
         {
-            throw new NotImplementedException();
+            var productDto = new ProductDto()
+            {
+                Id = product.Id,
+                Name = product.Name,
+                Value = product.Value
+            };
+
+            return productDto;
         }
 
         public IEnumerable<ProductDto> MapperListProductsDto(IEnumerable<Product> products)
