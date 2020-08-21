@@ -11,7 +11,7 @@ namespace rest_api_ddd.infrastructure.cross_cutting.interfaces
         /// </summary>
         /// <param name="productDto"></param>
         /// <returns></returns>
-        Product MapperDtoEntity(ProductDto productDto);
+        Product MapperDtoToEntity(ProductDto productDto);
 
         /// <summary>
         ///
@@ -25,6 +25,6 @@ namespace rest_api_ddd.infrastructure.cross_cutting.interfaces
         /// </summary>
         /// <param name="product"></param>
         /// <returns></returns>
-        Product MapperEntityToDto(Product product);
+        ProductDto MapperEntityToDto(Product product);
     }
 }
