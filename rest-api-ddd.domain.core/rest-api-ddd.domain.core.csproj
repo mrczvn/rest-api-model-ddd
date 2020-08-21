@@ -6,10 +6,6 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <Folder Include="interfaces\services\" />
-  </ItemGroup>
-
-  <ItemGroup>
     <ProjectReference Include="..\rest-api-ddd.domain\rest-api-ddd.domain.csproj" />
   </ItemGroup>
 
