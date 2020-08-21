@@ -36,9 +36,14 @@ namespace rest_api_ddd.domain.services
             return repository.GetAll();
         }
 
+        /// <summary>
+        ///
+        /// </summary>
+        /// <param name="id"></param>
+        /// <returns></returns>
         public TEntity GetById(int id)
         {
-            throw new NotImplementedException();
+            return repository.GetById(id);
         }
 
         public void Remove(TEntity obj)
