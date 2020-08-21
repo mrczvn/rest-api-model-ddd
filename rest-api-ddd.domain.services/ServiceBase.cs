@@ -1,6 +1,5 @@
 ﻿using rest_api_ddd.domain.core.interfaces.repositories;
 using rest_api_ddd.domain.core.interfaces.services;
-using System;
 using System.Collections.Generic;
 
 namespace rest_api_ddd.domain.services
@@ -55,6 +54,10 @@ namespace rest_api_ddd.domain.services
             repository.Remove(obj);
         }
 
+        /// <summary>
+        ///
+        /// </summary>
+        /// <param name="obj"></param>
         public void Update(TEntity obj)
         {
             repository.Update(obj);
