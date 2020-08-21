@@ -1,8 +1,8 @@
 ﻿using rest_api_ddd.domain.entitys;
 using rest_api_ddd.domain.services;
 using rest_api_ddd.infrastructure.cross_cutting.interfaces;
-using System;
 using System.Collections.Generic;
+using System.Linq;
 
 namespace rest_api_ddd.infrastructure.cross_cutting.mapper
 {
@@ -24,6 +24,7 @@ namespace rest_api_ddd.infrastructure.cross_cutting.mapper
                 Surname = clientDto.Surname,
                 Email = clientDto.Email
             };
+
             return client;
         }
 
@@ -41,12 +42,20 @@ namespace rest_api_ddd.infrastructure.cross_cutting.mapper
                 Surname = client.Surname,
                 Email = client.Email
             };
+
             return clientDto;
         }
 
+        /// <summary>
+        ///
+        /// </summary>
+        /// <param name="clients"></param>
+        /// <returns></returns>
         public IEnumerable<ClientDto> MapperListClientsDto(IEnumerable<Client> clients)
         {
-            throw new NotImplementedException();
+            var dto = clients.Select(c => new ClientDto { Id = c.Id, Name = c.Name, Surname = c.Surname, Email = c.Email });
+
+            return dto;
         }
     }
 }
