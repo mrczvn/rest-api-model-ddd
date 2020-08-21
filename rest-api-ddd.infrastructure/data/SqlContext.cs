@@ -5,7 +5,7 @@ using System.Linq;
 
 namespace rest_api_ddd.infrastructure.data
 {
-    internal class SqlContext : DbContext
+    public class SqlContext : DbContext
     {
         /// <summary>
         ///

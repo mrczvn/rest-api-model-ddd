@@ -12,7 +12,7 @@ namespace rest_api_ddd.domain.core.interfaces.repositories
 
         /// <summary>
         ///
-        /// </summary>
+        /// </summary> 
         /// <param name="obj"></param>
         void Update(TEntity obj);
 

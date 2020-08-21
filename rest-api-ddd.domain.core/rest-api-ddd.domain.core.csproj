@@ -7,7 +7,10 @@
 
   <ItemGroup>
     <Folder Include="interfaces\services\" />
-    <Folder Include="interfaces\repositories\" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\rest-api-ddd.domain\rest-api-ddd.domain.csproj" />
   </ItemGroup>
 
 </Project>
