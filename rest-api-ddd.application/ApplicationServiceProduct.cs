@@ -2,7 +2,6 @@
 using rest_api_ddd.application.interfaces;
 using rest_api_ddd.application.interfaces.mappers;
 using rest_api_ddd.domain.core.interfaces.services;
-using System;
 using System.Collections.Generic;
 
 namespace rest_api_ddd.application
@@ -61,9 +60,14 @@ namespace rest_api_ddd.application
             serviceProduct.Remove(product);
         }
 
+        /// <summary>
+        ///
+        /// </summary>
+        /// <param name="productDto"></param>
         public void Update(ProductDto productDto)
         {
-            throw new NotImplementedException();
+            var product = mapperProduct.MapperDtoToEntity(productDto);
+            serviceProduct.Update(product);
         }
     }
 }
