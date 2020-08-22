@@ -51,9 +51,14 @@ namespace rest_api_ddd.application
             return mapperProduct.MapperEntityToDto(product);
         }
 
+        /// <summary>
+        ///
+        /// </summary>
+        /// <param name="productDto"></param>
         public void Remove(ProductDto productDto)
         {
-            throw new NotImplementedException();
+            var product = mapperProduct.MapperDtoToEntity(productDto);
+            serviceProduct.Remove(product);
         }
 
         public void Update(ProductDto productDto)
