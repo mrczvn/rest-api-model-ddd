@@ -6,9 +6,8 @@ using System.Collections.Generic;
 
 namespace rest_api_ddd.application
 {
-    internal class ApplicationServiceProduct : IApplicationServiceProduct
+    public class ApplicationServiceProduct : IApplicationServiceProduct
     {
-        // fabio.pea@gmail.com
         private readonly IServiceProduct serviceProduct;
 
         private readonly IMapperProduct mapperProduct;
