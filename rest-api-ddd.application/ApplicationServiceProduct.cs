@@ -11,6 +11,7 @@ namespace rest_api_ddd.application
     {
         // fabio.pea@gmail.com
         private readonly IServiceProduct serviceProduct;
+
         private readonly IMapperProduct mapperProduct;
 
         public ApplicationServiceProduct(IServiceProduct serviceProduct, IMapperProduct mapperProduct)
@@ -36,12 +37,18 @@ namespace rest_api_ddd.application
         public IEnumerable<ProductDto> GetAll()
         {
             var products = serviceProduct.GetAll();
-            return mapperProduct.MapperListProductsDto(products)
+            return mapperProduct.MapperListProductsDto(products);
         }
 
+        /// <summary>
+        ///
+        /// </summary>
+        /// <param name="id"></param>
+        /// <returns></returns>
         public ProductDto GetById(int id)
         {
-            throw new NotImplementedException();
+            var product = serviceProduct.GetById(id);
+            return mapperProduct.MapperEntityToDto(product);
         }
 
         public void Remove(ProductDto productDto)
