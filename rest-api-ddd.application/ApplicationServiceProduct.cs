@@ -9,6 +9,7 @@ namespace rest_api_ddd.application
 {
     internal class ApplicationServiceProduct : IApplicationServiceProduct
     {
+        // fabio.pea@gmail.com
         private readonly IServiceProduct serviceProduct;
         private readonly IMapperProduct mapperProduct;
 
