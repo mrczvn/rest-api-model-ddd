@@ -20,5 +20,11 @@ namespace rest_api_ddd.api.Controllers
         {
             return Ok(_applicationServiceClient.GetAll());
         }
+
+        [HttpGet("{id}")]
+        public ActionResult<string> Get(int id)
+        {
+            return Ok(_applicationServiceClient.GetById(id));
+        }
     }
 }
