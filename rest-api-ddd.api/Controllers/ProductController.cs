@@ -59,7 +59,23 @@ namespace rest_api_ddd.api.Controllers
             }
             catch (Exception ex)
             {
+                throw ex;
+            }
+        }
 
+        [HttpDelete()]
+        public ActionResult Delete([FromBody] ProductDto productDto)
+        {
+            try
+            {
+                if (productDto == null)
+                    return NotFound();
+
+                _applicationServiceProduct.Remove(productDto);
+                return Ok("Cliente Removido com sucesso!");
+            }
+            catch (Exception ex)
+            {
                 throw ex;
             }
         }
