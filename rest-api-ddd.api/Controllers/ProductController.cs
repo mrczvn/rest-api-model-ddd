@@ -1,9 +1,6 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
-using Microsoft.AspNetCore.Mvc;
+﻿using Microsoft.AspNetCore.Mvc;
 using rest_api_ddd.application.interfaces;
+using System.Collections.Generic;
 
 namespace rest_api_ddd.api.Controllers
 {
@@ -12,6 +9,7 @@ namespace rest_api_ddd.api.Controllers
     public class ProductController : Controller
     {
         private readonly IApplicationServiceProduct _applicationServiceProduct;
+
         public ProductController(IApplicationServiceProduct ApplicationServiceProduct)
         {
             _applicationServiceProduct = ApplicationServiceProduct;
@@ -21,6 +19,12 @@ namespace rest_api_ddd.api.Controllers
         public ActionResult<IEnumerable<string>> Get()
         {
             return Ok(_applicationServiceProduct.GetAll());
+        }
+
+        [HttpGet("{id}")]
+        public ActionResult<string> Get(int id)
+        {
+            return Ok(_applicationServiceProduct.GetById(id));
         }
     }
 }
