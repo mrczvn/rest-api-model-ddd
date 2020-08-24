@@ -45,5 +45,23 @@ namespace rest_api_ddd.api.Controllers
                 throw ex;
             }
         }
+
+        [HttpPut]
+        public ActionResult Put([FromBody] ProductDto productDto)
+        {
+            try
+            {
+                if (productDto == null)
+                    return NotFound();
+
+                _applicationServiceProduct.Update(productDto);
+                return Ok("Produto Atualizado com sucesso!");
+            }
+            catch (Exception ex)
+            {
+
+                throw ex;
+            }
+        }
     }
 }

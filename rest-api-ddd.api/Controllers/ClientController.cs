@@ -38,7 +38,7 @@ namespace rest_api_ddd.api.Controllers
                     return NotFound();
 
                 _applicationServiceClient.Add(clientDto);
-                return Ok("Client Cadastrado com sucesso!");
+                return Ok("Cliente Cadastrado com sucesso!");
             }
             catch (Exception ex)
             {
