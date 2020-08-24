@@ -1,5 +1,7 @@
 ﻿using Microsoft.AspNetCore.Mvc;
+using rest_api_ddd.application.dtos;
 using rest_api_ddd.application.interfaces;
+using System;
 using System.Collections.Generic;
 
 namespace rest_api_ddd.api.Controllers
@@ -25,6 +27,23 @@ namespace rest_api_ddd.api.Controllers
         public ActionResult<string> Get(int id)
         {
             return Ok(_applicationServiceClient.GetById(id));
+        }
+
+        [HttpPost]
+        public ActionResult Post([FromBody] ClientDto clientDto)
+        {
+            try
+            {
+                if (clientDto == null)
+                    return NotFound();
+
+                _applicationServiceClient.Add(clientDto);
+                return Ok("Client Cadastrado com sucesso!");
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
         }
     }
 }
