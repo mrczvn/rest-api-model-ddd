@@ -62,5 +62,22 @@ namespace rest_api_ddd.api.Controllers
                 throw ex;
             }
         }
+
+        [HttpDelete()]
+        public ActionResult Delete([FromBody] ClientDto clientDto)
+        {
+            try
+            {
+                if (clientDto == null)
+                    return NotFound();
+
+                _applicationServiceClient.Remove(clientDto);
+                return Ok("Cliente Removido com sucesso!");
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
+        }
     }
 }
