@@ -6,7 +6,7 @@ using System.Collections.Generic;
 
 namespace rest_api_ddd.api.Controllers
 {
-    [Route("client")]
+    [Route("[controller]")]
     [ApiController]
     public class ClientController : Controller
     {
