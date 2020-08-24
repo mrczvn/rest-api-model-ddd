@@ -45,5 +45,22 @@ namespace rest_api_ddd.api.Controllers
                 throw ex;
             }
         }
+
+        [HttpPut]
+        public ActionResult Put([FromBody] ClientDto clientDto)
+        {
+            try
+            {
+                if (clientDto == null)
+                    return NotFound();
+
+                _applicationServiceClient.Update(clientDto);
+                return Ok("Cliente Atualizado com sucesso!");
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
+        }
     }
 }
