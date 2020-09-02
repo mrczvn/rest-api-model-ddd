@@ -8,36 +8,36 @@ namespace rest_api_ddd.api.Controllers
 {
     [Route("[controller]")]
     [ApiController]
-    public class ClientController : Controller
+    public class ClientsController : ControllerBase
     {
-        private readonly IApplicationServiceClient _applicationServiceClient;
+        private readonly IApplicationServiceClient applicationServiceClient;
 
-        public ClientController(IApplicationServiceClient ApplicationServiceClient)
+        public ClientsController(IApplicationServiceClient applicationServiceClient)
         {
-            _applicationServiceClient = ApplicationServiceClient;
+            this.applicationServiceClient = applicationServiceClient;
         }
 
         [HttpGet]
         public ActionResult<IEnumerable<string>> Get()
         {
-            return Ok(_applicationServiceClient.GetAll());
+            return Ok(applicationServiceClient.GetAll());
         }
 
         [HttpGet("{id}")]
         public ActionResult<string> Get(int id)
         {
-            return Ok(_applicationServiceClient.GetById(id));
+            return Ok(applicationServiceClient.GetById(id));
         }
 
         [HttpPost]
-        public ActionResult Post([FromBody] ClientDto clientDto)
+        public ActionResult Post([FromBody] ClientDto clientDTO)
         {
             try
             {
-                if (clientDto == null)
+                if (clientDTO == null)
                     return NotFound();
 
-                _applicationServiceClient.Add(clientDto);
+                applicationServiceClient.Add(clientDTO);
                 return Ok("Cliente Cadastrado com sucesso!");
             }
             catch (Exception ex)
@@ -47,14 +47,14 @@ namespace rest_api_ddd.api.Controllers
         }
 
         [HttpPut]
-        public ActionResult Put([FromBody] ClientDto clientDto)
+        public ActionResult Put([FromBody] ClientDto clientDTO)
         {
             try
             {
-                if (clientDto == null)
+                if (clientDTO == null)
                     return NotFound();
 
-                _applicationServiceClient.Update(clientDto);
+                applicationServiceClient.Update(clientDTO);
                 return Ok("Cliente Atualizado com sucesso!");
             }
             catch (Exception ex)
@@ -64,14 +64,14 @@ namespace rest_api_ddd.api.Controllers
         }
 
         [HttpDelete()]
-        public ActionResult Delete([FromBody] ClientDto clientDto)
+        public ActionResult Delete([FromBody] ClientDto clientDTO)
         {
             try
             {
-                if (clientDto == null)
+                if (clientDTO == null)
                     return NotFound();
 
-                _applicationServiceClient.Remove(clientDto);
+                applicationServiceClient.Remove(clientDTO);
                 return Ok("Cliente Removido com sucesso!");
             }
             catch (Exception ex)

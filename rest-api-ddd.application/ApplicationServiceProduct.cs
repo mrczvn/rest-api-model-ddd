@@ -9,7 +9,6 @@ namespace rest_api_ddd.application
     public class ApplicationServiceProduct : IApplicationServiceProduct
     {
         private readonly IServiceProduct serviceProduct;
-
         private readonly IMapperProduct mapperProduct;
 
         public ApplicationServiceProduct(IServiceProduct serviceProduct, IMapperProduct mapperProduct)

@@ -1,5 +1,6 @@
 ﻿using Autofac;
 using rest_api_ddd.application;
+using rest_api_ddd.application.interfaces;
 using rest_api_ddd.application.interfaces.mappers;
 using rest_api_ddd.application.mappers;
 using rest_api_ddd.domain.core.interfaces.repositories;
@@ -15,8 +16,8 @@ namespace rest_api_ddd.infrastructure.cross_cutting.ioc
         {
             #region IOC
 
-            builder.RegisterType<ApplicationServiceClient>().As<ApplicationServiceClient>();
-            builder.RegisterType<ApplicationServiceProduct>().As<ApplicationServiceProduct>();
+            builder.RegisterType<ApplicationServiceClient>().As<IApplicationServiceClient>();
+            builder.RegisterType<ApplicationServiceProduct>().As<IApplicationServiceProduct>();
             builder.RegisterType<ServiceClient>().As<IServiceClient>();
             builder.RegisterType<ServiceProduct>().As<IServiceProduct>();
             builder.RegisterType<RepositoryClient>().As<IRepositoryClient>();

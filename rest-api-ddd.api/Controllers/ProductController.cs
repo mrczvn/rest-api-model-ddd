@@ -8,36 +8,36 @@ namespace rest_api_ddd.api.Controllers
 {
     [Route("[controller]")]
     [ApiController]
-    public class ProductController : Controller
+    public class ProductsController : ControllerBase
     {
-        private readonly IApplicationServiceProduct _applicationServiceProduct;
+        private readonly IApplicationServiceProduct applicationServiceProduct;
 
-        public ProductController(IApplicationServiceProduct ApplicationServiceProduct)
+        public ProductsController(IApplicationServiceProduct applicationServiceProduct)
         {
-            _applicationServiceProduct = ApplicationServiceProduct;
+            this.applicationServiceProduct = applicationServiceProduct;
         }
 
         [HttpGet]
         public ActionResult<IEnumerable<string>> Get()
         {
-            return Ok(_applicationServiceProduct.GetAll());
+            return Ok(applicationServiceProduct.GetAll());
         }
 
         [HttpGet("{id}")]
         public ActionResult<string> Get(int id)
         {
-            return Ok(_applicationServiceProduct.GetById(id));
+            return Ok(applicationServiceProduct.GetById(id));
         }
 
         [HttpPost]
-        public ActionResult Post([FromBody] ProductDto productDto)
+        public ActionResult Post([FromBody] ProductDto productDTO)
         {
             try
             {
-                if (productDto == null)
+                if (productDTO == null)
                     return NotFound();
 
-                _applicationServiceProduct.Add(productDto);
+                applicationServiceProduct.Add(productDTO);
                 return Ok("Produto Cadastrado com sucesso!");
             }
             catch (Exception ex)
@@ -47,14 +47,14 @@ namespace rest_api_ddd.api.Controllers
         }
 
         [HttpPut]
-        public ActionResult Put([FromBody] ProductDto productDto)
+        public ActionResult Put([FromBody] ProductDto productDTO)
         {
             try
             {
-                if (productDto == null)
+                if (productDTO == null)
                     return NotFound();
 
-                _applicationServiceProduct.Update(productDto);
+                applicationServiceProduct.Update(productDTO);
                 return Ok("Produto Atualizado com sucesso!");
             }
             catch (Exception ex)
@@ -64,14 +64,14 @@ namespace rest_api_ddd.api.Controllers
         }
 
         [HttpDelete()]
-        public ActionResult Delete([FromBody] ProductDto productDto)
+        public ActionResult Delete([FromBody] ProductDto productDTO)
         {
             try
             {
-                if (productDto == null)
+                if (productDTO == null)
                     return NotFound();
 
-                _applicationServiceProduct.Remove(productDto);
+                applicationServiceProduct.Remove(productDTO);
                 return Ok("Cliente Removido com sucesso!");
             }
             catch (Exception ex)

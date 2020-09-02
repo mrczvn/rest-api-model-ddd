@@ -24,15 +24,16 @@ namespace rest_api_ddd.infrastructure.data.repositorys
         /// <param name="obj"></param>
         public void Add(TEntity obj)
         {
-            try
+            sqlContext.Set<TEntity>().Add(obj);
+            sqlContext.SaveChanges();
+            /*try
             {
-                sqlContext.Set<TEntity>().Add(obj);
-                sqlContext.SaveChanges();
+              
             }
             catch (Exception ex)
             {
                 throw ex;
-            }
+            }*/
         }
 
         /// <summary>
